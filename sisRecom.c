@@ -1,11 +1,19 @@
+/*
+    Darilton Mario - 20211852
+    Eugelice Yuye - 20210765
+    Otilia Marque - 20211958
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 #include "matriz_utils/matriz_utils.h"
 
 #define ALEATORIO ((double)random() / (double)RAND_MAX)
 
 int main(int argc , char *argv[]){
+    time_t start = time(NULL);
     double alpha;
     int iterations;
     int nU, nF, nI;
@@ -110,6 +118,7 @@ int main(int argc , char *argv[]){
         }
         printf("%d\n", recomendation_item);
     }
-
+    time_t end = time(NULL);
+    printf("Time taken: %.2f seconds\n", difftime(end, start));
     return 0;
 }
